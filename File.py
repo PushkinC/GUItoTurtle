@@ -11,30 +11,30 @@ def new(self):
 
 
 def opend(self):
-    fname = QFileDialog.getOpenFileName(self)
+    fname = QFileDialog.getOpenFileName(self, filter='*.trtsv')
     print(fname[0])
 
-    # try:
-    with open(fname[0], "rb") as f:
-        data = pickle.load(f)
-    setData(self, data)
+    try:
+        with open(fname[0], "rb") as f:
+            data = pickle.load(f)
+        setData(self, data)
 
-    # except Exception as ex:
-    #     print("Error during unpickling object (Possibly unsupported):", ex)
+    except Exception as ex:
+        print("Error during unpickling object (Possibly unsupported):", ex)
 
 
 def save(self):
     data = getData(self)
-    fname = QFileDialog.getSaveFileName(self)
+    fname = QFileDialog.getSaveFileName(self, filter='*.trtsv')
     print(fname[0], 'save')
 
-    # try:
-    if not os.path.exists(fname[0]):
-        open(fname[0], 'w').close()
-    with open(fname[0], 'wb') as f:
-        pickle.dump(data, f)
-    # except Exception as ex:
-    #     print("Error during pickling object (Possibly unsupported):", ex)
+    try:
+        if not os.path.exists(fname[0]):
+            open(fname[0], 'w').close()
+        with open(fname[0], 'wb') as f:
+            pickle.dump(data, f)
+    except Exception as ex:
+        print("Error during pickling object (Possibly unsupported):", ex)
 
 
 def getData(self) -> list:
