@@ -3,7 +3,11 @@ import pickle, os, Engine
 
 
 def new(self):
-
+    self.isAnim.setCheckState(2)
+    self.isTurtle.setCheckState(2)
+    self.listWidget.clear()
+    # for i in range(self.listWidget.count()):
+    #     self.listWidget.takeItem(self.listWidget.row(self.listWidget.item(i)))
 
 
 def opend(self):
