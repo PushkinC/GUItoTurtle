@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="Rotations">
+    <file>l.png</file>
+    <file>p.png</file>
+  </qresource>
+  <qresource prefix="Pen">
+    <file>penUp.png</file>
+    <file>penDown.png</file>
+  </qresource>
+  <qresource prefix="Forvard">
+    <file>v.png</file>
+  </qresource>
+</RCC>
