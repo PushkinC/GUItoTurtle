@@ -23,7 +23,6 @@ class Ui_Form(object):
         sizePolicy.setHeightForWidth(self.penUp.sizePolicy().hasHeightForWidth())
         self.penUp.setSizePolicy(sizePolicy)
         self.penUp.setMinimumSize(QtCore.QSize(51, 80))
-        self.penUp.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
         self.penUp.setStyleSheet("background-color: rgb(142, 255, 116);")
         self.penUp.setObjectName("penUp")
         self.label_6 = QtWidgets.QLabel(self.penUp)

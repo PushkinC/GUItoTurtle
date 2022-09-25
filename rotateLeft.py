@@ -23,7 +23,6 @@ class Ui_Form(object):
         sizePolicy.setHeightForWidth(self.rotateLeft.sizePolicy().hasHeightForWidth())
         self.rotateLeft.setSizePolicy(sizePolicy)
         self.rotateLeft.setMinimumSize(QtCore.QSize(100, 80))
-        self.rotateLeft.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
         self.rotateLeft.setStyleSheet("background-color: rgb(255, 112, 112);")
         self.rotateLeft.setObjectName("rotateLeft")
         self.label_3 = QtWidgets.QLabel(self.rotateLeft)

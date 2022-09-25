@@ -23,7 +23,6 @@ class Ui_Form(object):
         sizePolicy.setHeightForWidth(self.forvard.sizePolicy().hasHeightForWidth())
         self.forvard.setSizePolicy(sizePolicy)
         self.forvard.setMinimumSize(QtCore.QSize(100, 80))
-        self.forvard.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
         self.forvard.setStyleSheet("\n"
 "background-color: rgb(115, 115, 255);")
         self.forvard.setTitle("")

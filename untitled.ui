@@ -621,12 +621,38 @@ background-color: rgb(115, 115, 255);</string>
      <rect>
       <x>320</x>
       <y>500</y>
-      <width>131</width>
-      <height>31</height>
+      <width>130</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
      <string>Начать!</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnRemove">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>500</y>
+      <width>130</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Удалить</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnNew">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>500</y>
+      <width>130</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Новый</string>
     </property>
    </widget>
   </widget>
