@@ -1,9 +1,9 @@
 from PyQt5.QtWidgets import QFileDialog
-import dill, os
+import pickle, os, Engine
 
 
 def new(self):
-    pass
+
 
 
 def opend(self):
@@ -12,15 +12,15 @@ def opend(self):
 
     # try:
     with open(fname[0], "rb") as f:
-        data = dill.load(f)
-    self.listWidget = data
+        data = pickle.load(f)
+    setData(self, data)
 
     # except Exception as ex:
     #     print("Error during unpickling object (Possibly unsupported):", ex)
 
 
 def save(self):
-    data = self.listWidget
+    data = getData(self)
     fname = QFileDialog.getSaveFileName(self)
     print(fname[0], 'save')
 
@@ -28,8 +28,18 @@ def save(self):
     if not os.path.exists(fname[0]):
         open(fname[0], 'w').close()
     with open(fname[0], 'wb') as f:
-        dill.dump(data, f)
+        pickle.dump(data, f)
     # except Exception as ex:
     #     print("Error during pickling object (Possibly unsupported):", ex)
 
 
+def getData(self) -> list:
+    lst = []
+    for i in range(self.listWidget.count()):
+        lst.append(self.listWidget.item(i).text())
+    return lst
+
+
+def setData(self, data):
+    for i in data:
+        Engine.load(self, i)

@@ -129,3 +129,38 @@ def new(self):
 
     self.listWidget.insertItem(id, 'new')
     self.btnNew.setEnabled(False)
+
+
+def load(self, btn):
+    # Просто добавление
+    item = QListWidgetItem(self.listWidget)
+
+    match btn[0]:
+        case 'r':
+            a = RotateRight()
+            a.labelRight.setText(btn[1:])
+            item.setSizeHint(a.size())
+            item.setText(f'r{btn[1:]}')
+            self.listWidget.setItemWidget(item, a)
+        case 'l':
+            a = RotateLeft()
+            a.labelLeft.setText(btn[1:])
+            item.setSizeHint(a.size())
+            item.setText(f'l{btn[1:]}')
+            self.listWidget.setItemWidget(item, a)
+        case 'f':
+            a = Forvard()
+            a.labelForvard.setText(btn[1:])
+            item.setSizeHint(a.size())
+            item.setText(f'f{btn[1:]}')
+            self.listWidget.setItemWidget(item, a)
+        case 'u':
+            a = PenUp()
+            item.setSizeHint(a.size())
+            item.setText('u')
+            self.listWidget.setItemWidget(item, a)
+        case 'd':
+            a = PenDown()
+            item.setSizeHint(a.size())
+            item.setText('d')
+            self.listWidget.setItemWidget(item, a)
