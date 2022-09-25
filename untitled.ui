@@ -669,24 +669,24 @@ background-color: rgb(115, 115, 255);</string>
     <property name="title">
      <string>Файл</string>
     </property>
-    <addaction name="action"/>
-    <addaction name="action_2"/>
-    <addaction name="action_3"/>
+    <addaction name="newFileBtn"/>
+    <addaction name="openFileBtn"/>
+    <addaction name="saveFileBtn"/>
    </widget>
    <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="action">
+  <action name="newFileBtn">
    <property name="text">
     <string>Создать новый файл</string>
    </property>
   </action>
-  <action name="action_2">
+  <action name="openFileBtn">
    <property name="text">
     <string>Открыть файл</string>
    </property>
   </action>
-  <action name="action_3">
+  <action name="saveFileBtn">
    <property name="text">
     <string>Сохранить файл</string>
    </property>

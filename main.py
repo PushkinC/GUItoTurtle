@@ -1,7 +1,5 @@
-import sys, Engine, Player
-
+import sys, Engine, Player, File
 from PyQt5 import uic  # Импортируем uic
-from PyQt5 import QtCore, QtWidgets, QtGui
 from PyQt5.QtWidgets import QApplication, QMainWindow, QListWidget, QListWidgetItem, QWidget
 from PyQt5.QtGui import QPixmap
 
@@ -33,54 +31,11 @@ class MyWidget(QMainWindow):
         self.btnRemove.clicked.connect(lambda: Engine.remove(self))
         self.btnNew.clicked.connect(lambda: Engine.new(self))
 
-
-        QtCore.Qt.Checked
-
-
-
+        self.newFileBtn.triggered.connect(lambda: File.new(self))
+        self.openFileBtn.triggered.connect(lambda: File.opend(self))
+        self.saveFileBtn.triggered.connect(lambda: File.save(self))
 
 
-
-
-
-
-    #     Рудимент
-    def addToList(self):
-        item = QListWidgetItem(self.listWidget)
-
-        a = Forvard()
-        item.setSizeHint(a.size())
-        self.listWidget.setItemWidget(item, a)
-
-        item = QListWidgetItem(self.listWidget)
-
-        a = RotateRight()
-        item.setSizeHint(a.size())
-        self.listWidget.setItemWidget(item, a)
-
-        item = QListWidgetItem(self.listWidget)
-
-        a = RotateLeft()
-        item.setSizeHint(a.size())
-        self.listWidget.setItemWidget(item, a)
-
-        item = QListWidgetItem(self.listWidget)
-
-        a = PenUp()
-        item.setSizeHint(a.size())
-        self.listWidget.setItemWidget(item, a)
-
-        item = QListWidgetItem(self.listWidget)
-
-        a = PenDown()
-        item.setSizeHint(a.size())
-        self.listWidget.setItemWidget(item, a)
-
-        item = QListWidgetItem(self.listWidget)
-
-        a = PenDown()
-        item.setSizeHint(a.size())
-        self.listWidget.setItemWidget(item, a)
 
 
 
