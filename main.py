@@ -1,9 +1,7 @@
 import sys, Engine, Player, File
-from PyQt5 import uic  # Импортируем uic
-from PyQt5.QtWidgets import QApplication, QMainWindow, QListWidget, QListWidgetItem, QWidget
-from PyQt5.QtGui import QPixmap
-
-
+from PyQt5 import uic, QtGui  # Импортируем uic
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
+from PyQt5.QtGui import QPixmap, QPainter
 
 
 class MyWidget(QMainWindow):
@@ -21,6 +19,18 @@ class MyWidget(QMainWindow):
         self.label_5.setPixmap(QPixmap('Pictures/v.png'))
         self.label_6.setPixmap(QPixmap('Pictures/penUp.png'))
         self.label_8.setPixmap(QPixmap('Pictures/penDown.png'))
+
+
+        # self.background = QLabel(self)
+        # self.background.move(0, 0)
+        # self.background.resize(800, 800)
+        # self.background.setScaledContents(True)
+        # self.background.setPixmap(QPixmap('Pictures/img.png'))
+
+        # self.setStyleSheet('''#centralwidget {
+        #                    background-image: url(\'Pictures/img.png\');
+        #                    background-size: cover;
+        #                    }''')
 
         self.btnRight.clicked.connect(lambda: Engine.add(self, 'r'))
         self.btnLeft.clicked.connect(lambda: Engine.add(self, 'l'))

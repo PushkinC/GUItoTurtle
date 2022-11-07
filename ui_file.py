@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QPixmap
 
 
 class Ui_MainWindow(object):
@@ -251,6 +252,7 @@ class Ui_MainWindow(object):
         self.menu.addAction(self.action_2)
         self.menu.addAction(self.action_3)
         self.menubar.addAction(self.menu.menuAction())
+
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
