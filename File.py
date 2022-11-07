@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QFileDialog
 import pickle, os, Engine
 
-
+# Очистка алгоритма
 def new(self):
     self.isAnim.setCheckState(2)
     self.isTurtle.setCheckState(2)
@@ -9,7 +9,7 @@ def new(self):
     # for i in range(self.listWidget.count()):
     #     self.listWidget.takeItem(self.listWidget.row(self.listWidget.item(i)))
 
-
+# Открытие алгоритма
 def opend(self):
     fname = QFileDialog.getOpenFileName(self, filter='*.trtsv')
     print(fname[0])
@@ -22,7 +22,7 @@ def opend(self):
     except Exception as ex:
         print("Error during unpickling object (Possibly unsupported):", ex)
 
-
+# Сохранение алгоритма
 def save(self):
     data = getData(self)
     fname = QFileDialog.getSaveFileName(self, filter='*.trtsv')
@@ -36,14 +36,14 @@ def save(self):
     except Exception as ex:
         print("Error during pickling object (Possibly unsupported):", ex)
 
-
+# Функция подготовки данных для сохранения
 def getData(self) -> list:
     lst = []
     for i in range(self.listWidget.count()):
         lst.append(self.listWidget.item(i).text())
     return lst
 
-
+# Функция установки данных в окно
 def setData(self, data):
     for i in data:
         Engine.load(self, i)

@@ -1,7 +1,7 @@
 import turtle
 
 
-
+# Начало
 def start(self):
 
     if self.isTurtle.checkState() == 2:

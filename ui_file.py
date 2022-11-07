@@ -275,4 +275,4 @@ class Ui_MainWindow(object):
         self.action.setText(_translate("MainWindow", "Создать новый файл"))
         self.action_2.setText(_translate("MainWindow", "Открыть файл"))
         self.action_3.setText(_translate("MainWindow", "Сохранить файл"))
-import widgetsImages_rc
+
