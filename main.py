@@ -1,7 +1,7 @@
 import sys, Engine, Player, File
 from PyQt5 import uic, QtGui  # Импортируем uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
-from PyQt5.QtGui import QPixmap, QPainter, QIntValidator
+from PyQt5.QtGui import QPixmap, QPainter, QIntValidator, QIcon
 
 
 class MyWidget(QMainWindow):
@@ -21,6 +21,8 @@ class MyWidget(QMainWindow):
         self.textForvard.setValidator(QIntValidator(1, 9999, self))
         self.textRight.setValidator(QIntValidator(1, 359))
         self.textLeft.setValidator(QIntValidator(1, 359))
+
+        self.setWindowIcon(QIcon('Pictures/icon.ico'))
 
 
         # self.background = QLabel(self)
