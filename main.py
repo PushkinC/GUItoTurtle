@@ -2,12 +2,14 @@ import sys, Engine, Player, File
 from PyQt5 import uic, QtGui  # Импортируем uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
 from PyQt5.QtGui import QPixmap, QPainter, QIntValidator, QIcon
+import ui_file
 
 
-class MyWidget(QMainWindow):
+class MyWidget(QMainWindow, ui_file.Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('untitled.ui', self)  # Загружаем дизайн
+        # uic.loadUi('untitled.ui', self)  # Загружаем дизайн
+        self.setupUi(self)
         # Донастраиваем форму
         self.reloadForm()
 
