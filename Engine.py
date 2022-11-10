@@ -1,4 +1,4 @@
-import penUp, penDown, forvard, rotateRight, rotateLeft
+from Buttons import rotateLeft, rotateRight, penUp, forvard, penDown
 from PyQt5.QtWidgets import QListWidgetItem, QWidget
 
 
@@ -36,6 +36,7 @@ class RotateLeft(QWidget, rotateLeft.Ui_Form):
 def add(self, btn):
     # Если есть новый элемент
     self.btnNew.setEnabled(True)
+    self.btnPlay.setEnabled(True)
     for i in range(self.listWidget.count()):
         if self.listWidget.item(i).text() == 'new':
             item = self.listWidget.item(i)
@@ -129,6 +130,7 @@ def new(self):
 
     self.listWidget.insertItem(id, 'new')
     self.btnNew.setEnabled(False)
+    self.btnPlay.setEnabled(False)
 
 
 def load(self, btn):

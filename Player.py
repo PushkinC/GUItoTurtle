@@ -19,7 +19,6 @@ def start(self):
 
     for i in range(self.listWidget.count()):
         a = self.listWidget.item(i).text()
-        print(a)
         match a[0]:
             case 'f':
                 turtle.fd(int(a[1:]))

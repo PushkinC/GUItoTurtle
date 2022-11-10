@@ -1,7 +1,7 @@
 import sys, Engine, Player, File
 from PyQt5 import uic, QtGui  # Импортируем uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
-from PyQt5.QtGui import QPixmap, QPainter
+from PyQt5.QtGui import QPixmap, QPainter, QIntValidator
 
 
 class MyWidget(QMainWindow):
@@ -11,14 +11,16 @@ class MyWidget(QMainWindow):
         # Донастраиваем форму
         self.reloadForm()
 
-
-
-    def reloadForm(self): # SetSettings
+    def reloadForm(self):  # SetSettings
         self.label.setPixmap(QPixmap('Pictures/p.png'))
         self.label_3.setPixmap(QPixmap('Pictures/l.png'))
         self.label_5.setPixmap(QPixmap('Pictures/v.png'))
         self.label_6.setPixmap(QPixmap('Pictures/penUp.png'))
         self.label_8.setPixmap(QPixmap('Pictures/penDown.png'))
+
+        self.textForvard.setValidator(QIntValidator(1, 9999, self))
+        self.textRight.setValidator(QIntValidator(1, 359))
+        self.textLeft.setValidator(QIntValidator(1, 359))
 
 
         # self.background = QLabel(self)
