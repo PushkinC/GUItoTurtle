@@ -27,17 +27,6 @@ class MyWidget(QMainWindow, ui_file.Ui_MainWindow):
         self.setWindowIcon(QIcon('Pictures/icon.ico'))
 
 
-        # self.background = QLabel(self)
-        # self.background.move(0, 0)
-        # self.background.resize(800, 800)
-        # self.background.setScaledContents(True)
-        # self.background.setPixmap(QPixmap('Pictures/img.png'))
-
-        # self.setStyleSheet('''#centralwidget {
-        #                    background-image: url(\'Pictures/img.png\');
-        #                    background-size: cover;
-        #                    }''')
-
         self.btnRight.clicked.connect(lambda: Engine.add(self, 'r'))
         self.btnLeft.clicked.connect(lambda: Engine.add(self, 'l'))
         self.btnForvard.clicked.connect(lambda: Engine.add(self, 'f'))
